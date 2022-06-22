@@ -19,7 +19,7 @@
                 const weeks2year = 52.17857;
                 const weeks = expectation * weeks2year;
                 const checks = age * weeks2year;
-                boxes.innerHTML = "<p>Each checkbox represents a single week</p>";
+                boxes.innerHTML = "<p>Each box represents a single week. The checked boxes are weeks you've already lived through.</p>";
                 for (let i = 0; i < weeks; ++i) {
                     let cb = document.createElement("input");
                     cb.type = "checkbox";
