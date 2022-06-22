@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="boxes"></div>
+        <script type="text/javascript">
+            let age = parseInt(prompt("How many years old are you", "30"));
+            let expectation = parseInt(prompt("How many years do you plan on living (be realistic)", "80"));
+            let boxes = document.getElementById("boxes");
+            let weeks = expectation * 52;
+            let years = age;
+            let checks = years * 52;
+            for (let i = 0; i < weeks; ++i) {
+                let cb = document.createElement("input");
+                cb.type = "checkbox";
+                cb.checked = i <= checks;
+                boxes.appendChild(cb);
+            }
+        </script>
+    </body>
+</html>
