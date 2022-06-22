@@ -6,7 +6,6 @@
     </head>
     <body>
         <h1>Procrastination Calendar</h1>
-        <p>Each checkbox represents a single week</p>
         <div id="boxes">
             <span>How many years old are you?</span> <input id="age" type="number" value="30"/><br/>
             <span>How many years do you plan on living? (Be realistic)</span> <input id="expectation" type="number" value="80" /><br/>
@@ -20,7 +19,7 @@
                 const weeks2year = 52.17857;
                 const weeks = expectation * weeks2year;
                 const checks = age * weeks2year;
-                boxes.innerHTML = "";
+                boxes.innerHTML = "<p>Each checkbox represents a single week</p>";
                 for (let i = 0; i < weeks; ++i) {
                     let cb = document.createElement("input");
                     cb.type = "checkbox";
