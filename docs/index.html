@@ -13,18 +13,20 @@
             <button onclick="go()">Show me</button>
         </div>
         <script type="text/javascript">
-            let age = parseInt(document.getElementById("age").value);
-            let expectation = parseInt(document.getElementById("expectation").value);
-            let boxes = document.getElementById("boxes");
-            const weeks2year = 52.17857;
-            const weeks = expectation * weeks2year;
-            const checks = age * weeks2year;
-            boxes.innerHTML = "";
-            for (let i = 0; i < weeks; ++i) {
-                let cb = document.createElement("input");
-                cb.type = "checkbox";
-                cb.checked = i <= checks;
-                boxes.appendChild(cb);
+            function go() {
+                let age = parseInt(document.getElementById("age").value);
+                let expectation = parseInt(document.getElementById("expectation").value);
+                let boxes = document.getElementById("boxes");
+                const weeks2year = 52.17857;
+                const weeks = expectation * weeks2year;
+                const checks = age * weeks2year;
+                boxes.innerHTML = "";
+                for (let i = 0; i < weeks; ++i) {
+                    let cb = document.createElement("input");
+                    cb.type = "checkbox";
+                    cb.checked = i <= checks;
+                    boxes.appendChild(cb);
+                }
             }
         </script>
     </body>
